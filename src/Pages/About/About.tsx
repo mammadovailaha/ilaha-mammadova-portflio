@@ -1,4 +1,5 @@
 import SectionList from "../../components/SectionList";
+import Skills from "../../components/Skills";
 import Navbar from "../../Layout/Navbar";
 import AboutHero from "./AboutHero";
 import Cerificates from "./Cerificates";
@@ -47,11 +48,11 @@ const experienceData = [
     description:
       "Developed UI components with HTML, CSS, and React; contributed to sprint planning and practiced Agile workflows in a collaborative team.",
   },
-  {
-    institution: "CodeAlpha",
+{
+    institution: "Flup Agency",
     location: "Baku, Azerbaijan",
-    degree: "Web Developer (Internship)",
-    year: "July 2025 – Present",
+    degree: "Frontend Developer (Internship)",
+    year: "August 2025 – September 2025",
     description:
       "Created responsive web pages and enhanced existing UI elements while working in a version-controlled team environment using Git and Agile processes.",
   },
@@ -73,6 +74,7 @@ const About = () => {
         title={"Work Experince"}
       />
       <Cerificates />
+      <Skills />
     </div>
   );
 };
