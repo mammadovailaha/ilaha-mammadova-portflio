@@ -1,4 +1,4 @@
-import personalPhoto from "../../assets/icons/abouPagePhoto.jpg";
+import personalPhoto from "../../assets/images/unnamed.jpg";
 import ActionToggleButtons from "../../UI/ActionToggleButtons";
 
 const AboutHero = () => {
@@ -16,7 +16,7 @@ const AboutHero = () => {
               Developer with hands-on experience in real-world projects. I
               specialize in building responsive, user-friendly, and scalable web
               interfaces using modern technologies such as HTML5, CSS3,
-              JavaScript, TypeScript, React.js, and Tailwind CSS. I have a
+              JavaScript, TypeScript, React.js, Next.js and Tailwind CSS. I have a
               strong focus on writing clean, maintainable code and working
               efficiently with Git and GitHub in collaborative, Agile-driven
               teams. Currently, I’m expanding my skill set by learning Next.js

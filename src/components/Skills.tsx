@@ -11,6 +11,7 @@ import scssIcon from ".././assets/icons/scss-svgrepo-com.svg";
 import typescriptIcon from ".././assets/icons/typescript-svgrepo-com.svg";
 import bgImage from ".././assets/images/skillSection.png"
 import SkillCard from "./SkillCard";
+import figma from "../assets/icons/figma-svgrepo-com.svg"
 
 
 const skills = [
@@ -24,6 +25,7 @@ const skills = [
   { url: nextjsIcon, title: "Next.js" },
   { url: nodejsIcon, title: "Node.js" },
   { url: mangodbIcon, title: "MangoDB" },
+  { url: figma, title: "Figma" },
 ];
 
 const Skills: FC = () => {
@@ -37,9 +39,9 @@ const Skills: FC = () => {
       }}
     className="w-full h-auto flex flex-col justify-start items-center gap-11 py-5 rounded-4xl ">
       <h2 className="text-[#FD853A] font-medium text-4xl md:text-6xl font-[lufga]">My Core Skills</h2>
-      <div className="w-[50%] md:w-[65%] lg:w-full flex flex-col md:flex-row flex-wrap justify-center items-center gap-5">
-        {skills.map((data)=>(
-          <SkillCard url={data.url} title={data.title}/>
+      <div className="w-[50%] md:w-[65%] lg:w-full flex flex-col md:flex-row flex-wrap justify-center items-center gap-5 mt-1">
+        {skills.map((data, index)=>(
+          <SkillCard key={index} url={data.url} title={data.title}/>
         ))}
       </div>
     </div>

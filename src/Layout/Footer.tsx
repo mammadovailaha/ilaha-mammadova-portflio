@@ -58,8 +58,9 @@ const Footer = () => {
                 Navigation
               </h3>
               <ul className="flex flex-col justify-center items-start gap-1 md:gap-3">
-                {navItems.map((link) => (
+                {navItems.map((link, index) => (
                   <Link
+                    key={index}
                     className="text-[#FCFCFD] text-xs md:text-lg font-[lufga]"
                     to={link.path}
                   >

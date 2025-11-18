@@ -52,7 +52,7 @@ const experienceData = [
     institution: "Flup Agency",
     location: "Baku, Azerbaijan",
     degree: "Frontend Developer (Internship)",
-    year: "August 2025 – September 2025",
+    year: "August 2025 – October 2025",
     description:
       "Created responsive web pages and enhanced existing UI elements while working in a version-controlled team environment using Git and Agile processes.",
   },
