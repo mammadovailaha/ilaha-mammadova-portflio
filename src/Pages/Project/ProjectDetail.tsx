@@ -1,56 +1,79 @@
 import type { FC } from "react";
 import photo from "../../assets/icons/projectPhoto1.png";
+import agilePulse from "../../assets/images/agilePluse.png";
+import portfolio from "../../assets/images/designerProtfolio.png";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../../Layout/Navbar";
 import { IoLogoGithub } from "react-icons/io";
 import { CgWebsite } from "react-icons/cg";
+import { useT } from "../../context/Preferences";
+import type { TranslationKey } from "../../context/Preferences";
 const projectData = [
   {
     id: 1,
-    title: "Education Saytı",
-    description:
-      "Təhsil mövzulu veb sayt. HTML, CSS, JavaScript və React ilə hazırlanıb. Responsiv dizayn və interaktiv komponentlərlə təchiz olunub.",
+    titleKey: "educationProject" as TranslationKey,
+    descriptionKey: "projectOneDescription" as TranslationKey,
     image: photo,
     githubLink: "https://github.com/mammadovailaha/Final-project",
     liveDemo: "https://edu-project-pi.vercel.app/",
   },
+  {
+    id: 2,
+    titleKey: "agile" as TranslationKey,
+    descriptionKey: "projectTwoDescription" as TranslationKey,
+    image: agilePulse,
+    liveDemo: "https://agilepulse.org/",
+  },
+  {
+    id: 3,
+    titleKey: "portfolio" as TranslationKey,
+    descriptionKey: "projectThreeDescription" as TranslationKey,
+    image: portfolio,
+    githubLink: "https://github.com/mammadovailaha/parvin_gasimova",
+    liveDemo: "https://parvingasimova.vercel.app/",
+  },
 ];
 const ProjectDetail: FC = () => {
   const { id } = useParams();
+  const t = useT();
   const data = projectData.find((item) => item.id === Number(id));
   return (
     <div className="overflow-x-hidden">
       <Navbar />
-      <div className="w-full h-screen flex  flex-col md:flex-row justify-center items-start gap-10 p-10 ">
-        <div className="w-64 md:w-88 h-54 md:h-78 rounded-4xl shadow-lg">
+      <div className="mx-auto flex min-h-[75vh] w-[94%] max-w-[1280px] flex-col items-start justify-center gap-10 py-12 md:flex-row md:items-center">
+        <div className="w-full overflow-hidden rounded-[2rem] border border-[var(--line)] bg-[var(--surface-card)] shadow-[var(--shadow-card)] md:w-1/2">
           <img
-            className="w-full h-full object-cover rounded-4xl"
+            className="aspect-[4/3] w-full object-cover"
             src={data?.image}
             alt="project photo"
           />
         </div>
-        <div className="flex flex-col justify-center items-start gap-3 md:gap-5 w-[90%] md:w-[50%]">
-          <h2 className=" text-[#FD853A]  font-medium text-2xl md:text-4xl lg:text-6xl font-[lufga] flex gap-1 md:gap-3 ">
-            {data?.title}
+        <div className="flex w-full flex-col items-start justify-center gap-4 md:w-[42%]">
+          <h2 className="flex gap-1 font-[lufga] text-2xl font-medium text-[var(--accent)] md:gap-3 md:text-4xl lg:text-6xl">
+            {data && t(data.titleKey)}
           </h2>
-          <p className="text-sm md:text-base font-[lufga]">{data?.description}</p>
+          <p className="text-base leading-7 text-[var(--muted)]">{data && t(data.descriptionKey)}</p>
           {data?.githubLink && (
             <Link
-              className="flex justify-center items-center gap-2 font-[lufga]"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-2 font-[lufga] text-[var(--text)] transition hover:text-[var(--accent)]"
               to={data.githubLink}
             >
               {" "}
-              <IoLogoGithub className="text-lg lg:text-2xl text-[#344054] " />{" "}
+              <IoLogoGithub className="text-lg lg:text-2xl" />{" "}
               GitHub link
             </Link>
           )}
           {data?.liveDemo && (
             <Link
-              className="flex justify-center items-center gap-2 font-[lufga]"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-2 font-[lufga] text-[var(--text)] transition hover:text-[var(--accent)]"
               to={data.liveDemo}
             >
               {" "}
-              <CgWebsite className="text-lg lg:text-2xl text-[#344054]" /> Web
+              <CgWebsite className="text-lg lg:text-2xl" /> Web
               site
             </Link>
           )}

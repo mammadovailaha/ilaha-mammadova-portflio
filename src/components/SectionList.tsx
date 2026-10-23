@@ -1,55 +1,68 @@
 import type { FC } from "react";
-import pointLine from "../assets/icons/pointLine.svg";
 import ScrollAnimation from "./ScrollAnimation";
+import { useT } from "../context/Preferences";
+import type { TranslationKey } from "../context/Preferences";
 
 interface DataItem {
-  institution: string;
-  year: string;
-  degree: string;
-  description: string;
+  institution?: string;
+  year?: string;
+  degree?: string;
+  description?: string;
+  institutionKey?: TranslationKey;
+  degreeKey?: TranslationKey;
+  descriptionKey?: TranslationKey;
+  date?: string;
 }
+
+const educationItems: DataItem[] = [
+  {
+    institution: "Azerbaijan State Pedagogical University",
+    degreeKey: "degree",
+    year: "2020 – 2024",
+    descriptionKey: "educationDescription",
+  },
+  { institution: "Turing Academy · Baku, Azerbaijan", degreeKey: "turingCourse", descriptionKey: "turingDescription" },
+  { institution: "Network Training Center · Baku, Azerbaijan", degreeKey: "networkCourse", descriptionKey: "networkDescription" },
+];
+
+const experienceItems: DataItem[] = [
+  { institution: "Agile Pulse (Startup) · Baku, Azerbaijan", degreeKey: "frontendRole", date: "May 2025 – January 2026", descriptionKey: "agileDescription" },
+  { institution: "Intern Intelligence · Baku, Azerbaijan", degreeKey: "internRole", date: "July 2025 – August 2025", descriptionKey: "internDescription" },
+  { institution: "Flup Agency · Baku, Azerbaijan", degreeKey: "internRole", date: "August 2025 – November 2025", descriptionKey: "flupDescription" },
+  { institution: "Is Hesabi MMC · Baku, Azerbaijan", degreeKey: "frontendRole", date: "December 2025 – Present", descriptionKey: "isHesabiDescription" },
+];
 
 interface Props {
   title: string;
-  data: DataItem[];
+  data?: DataItem[];
   listClassName:string;
 }
 
-const SectionList: FC<Props> = ({ title, data, listClassName }) => {
+const SectionList: FC<Props> = ({ title, data = title === "Education" ? educationItems : experienceItems, listClassName }) => {
+  const t = useT();
   return (
    <ScrollAnimation>
-     <div className={`${listClassName} w-full min-h-[640px] flex flex-col justify-center items-center pt-5 gap-10 xl:gap-16`}>
-      <h1 className="text-[#FD853A] font-medium text-4xl md:text-6xl font-[lufga] flex gap-4">
-        <span className="text-[#344054] font-medium text-4xl md:text-6xl font-[lufga]">My</span>
-        {title}
-      </h1>
+     <section id={title === "Experience" ? "experience" : undefined} className={`${listClassName} section-wrap my-8 rounded-[2rem] px-6 py-12 sm:px-10 lg:px-16`}>
+      <h2 className="mb-10 text-3xl font-semibold tracking-[-0.05em] text-[var(--text)] sm:text-4xl">
+        {title === "Education" ? t("education") : t("difference")}
+      </h2>
 
-      <div className="w-[90%] flex justify-center items-center gap-6 md:gap-16 ">
-        <div className="w-full lg:w-[40%] flex flex-col justify-center items-start gap-12 md:gap-11 xl:gap-7">
-          {data.map((item, index) => (
-            <div key={index} className="flex flex-col justify-center items-start gap-2">
-              <h2 className="text-lg md:text-3xl xl:text-4xl font-semibold font-[lufga] text-[#344054]">
-                {item.institution}
-              </h2>
-              <p className="text-[#98A2B3] font-normal font-[lufga] text-base xl:text-xl">{item.year}</p>
+      <div className="experience-list">
+        {data.map((item, index) => (
+          <article key={`${item.institution ?? item.institutionKey}-${index}`} className="experience-row">
+            <div className="experience-topline">
+              <div>
+                <p className="experience-index">{item.year || `0${index + 1}`}</p>
+                <h3>{item.institutionKey ? t(item.institutionKey) : item.institution}</h3>
+                {item.degreeKey && <h4>{t(item.degreeKey)}</h4>}
+              </div>
+              {item.date && <p className="experience-date">{item.date}</p>}
             </div>
-          ))}
-        </div>
-
-        <div className="hidden lg:block">
-          <img src={pointLine} alt="design" />
-        </div>
-
-        <div className="w-full lg:w-[40%] flex flex-col justify-center items-start gap-2 md:gap-4">
-          {data.map((item, index) => (
-            <div key={index}>
-              <h2 className="text-base md:text-2xl lg:text-3xl xl:text-4xl font-semibold font-[lufga] text-[#344054]">{item.degree}</h2>
-              <p className="text-[#98A2B3] font-normal font-[lufga] text-xs md:text-sm lg:text-base xl:text-xl">{item.description}</p>
-            </div>
-          ))}
-        </div>
+            <p className="experience-description">{item.descriptionKey ? t(item.descriptionKey) : item.description}</p>
+          </article>
+        ))}
       </div>
-    </div>
+    </section>
    </ScrollAnimation>
   );
 };

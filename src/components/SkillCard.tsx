@@ -1,19 +1,21 @@
-import type { FC } from "react"
+import type { FC } from "react";
 
-
-interface skillCardProps{
-  url:string;
-  title:string
+interface SkillCardProps {
+  url: string | null;
+  title: string;
+  category: string;
+  "aria-hidden"?: boolean | "true";
 }
-const SkillCard:FC<skillCardProps> = ({url, title}) => {
-  return (
-    <div className="w-45 h-45 md:w-55 md:h-55 shadow border border-[#FD853A] shadow-[0_4px_10px_rgba(255,255,255,0.3)] bg-[#ffffff19] backdrop-blur-md rounded-4xl flex flex-col justify-center items-center group">
-      <img className="w-[50%] h-[50%]  object-cover  transform-gpu transition-transform duration-500 ease-out
-           will-change-transform [backface-visibility:hidden]
-           group-hover:[transform:perspective(1000px)_rotateY(70deg)]" src={url} alt={`${title} icon`} />
-           <p className="text-[#f2f2f2] font-normal font-[lufga] text-base xl:text-xl">{title}</p>
+
+const SkillCard: FC<SkillCardProps> = ({ url, title, category, "aria-hidden": hidden }) => (
+  <article aria-hidden={hidden || undefined} className="skill-card group">
+    <div className="skill-card-top"><span className="skill-card-category">{category}</span><span className="skill-card-dot" /></div>
+    <div className="skill-logo">
+      {url ? <img src={url} alt="" /> : <span aria-hidden="true">{title.split(/[ &.]/).filter(Boolean).slice(0, 2).map((part) => part[0]).join("")}</span>}
     </div>
-  )
-}
+    <p className="skill-card-name">{title}</p>
+    <span className="skill-card-rule" />
+  </article>
+);
 
-export default SkillCard
+export default SkillCard;

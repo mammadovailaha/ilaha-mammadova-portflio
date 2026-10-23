@@ -6,24 +6,13 @@ interface Props {
   onClick: () => void;
 }
 
-const ProjectCard: FC<Props> = ({ title, src, onClick }) => {
-  return (
-    <div
-      onClick={onClick}
-      className="w-48 md:w-78 h-40 md:h-70 shadow border border-[#FD853A] bg-[#ffffff19] backdrop-blur-md rounded-3xl md:rounded-4xl flex flex-col justify-end items-center gap-6"
-    >
-      <h3 className="text-lg md:text-2xl font-medium text-[#344054] mt-1">
-        {title}
-      </h3>
-      <div className="w-full h-50 rounded-4xl">
-        <img
-          className="w-full h-full object-cover rounded-3xl md:rounded-4xl"
-          src={src}
-          alt="project photo"
-        />
-      </div>
+const ProjectCard: FC<Props> = ({ title, src, onClick }) => (
+  <button type="button" onClick={onClick} aria-label={`View ${title} project details`} className="project-card group block w-full cursor-pointer text-left">
+    <div className="aspect-[16/9] overflow-hidden bg-[var(--surface-soft)]">
+      <img className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]" src={src} alt={`${title} preview`} />
     </div>
-  );
-};
+    <h2 className="px-5 pt-5 text-2xl font-semibold tracking-[-0.04em] text-[var(--text)] sm:px-7 sm:text-3xl">{title}</h2>
+  </button>
+);
 
 export default ProjectCard;

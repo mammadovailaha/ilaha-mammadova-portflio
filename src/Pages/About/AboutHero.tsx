@@ -1,40 +1,29 @@
-import personalPhoto from "../../assets/images/unnamed.jpg";
+import personalPhoto from "../../assets/images/ilaha-workspace.jpg";
 import ActionToggleButtons from "../../UI/ActionToggleButtons";
+import { useT } from "../../context/Preferences";
 
 const AboutHero = () => {
-
-
+  const t = useT();
   return (
-          <div className="w-full lg:w-[85%] h-auto flex flex-col-reverse md:flex-row justify-center items-center gap-7 p-5">
-        <div className="w-[90%] md:w-[70%] lg:w-[64%] flex  flex-col justify-center items-start gap-6">
-          <div className="w-[90%] flex flex-col justify-center items-center gap-10">
-            <h1 className="text-[#344054] text-3xl md:text-4xl font-semibold">
-              About me
-            </h1>
-            <p className="text-xs md:text-sm lg:text-base">
-              I’m a self-motivated and growth-oriented Junior Front-End
-              Developer with hands-on experience in real-world projects. I
-              specialize in building responsive, user-friendly, and scalable web
-              interfaces using modern technologies such as HTML5, CSS3,
-              JavaScript, TypeScript, React.js, Next.js and Tailwind CSS. I have a
-              strong focus on writing clean, maintainable code and working
-              efficiently with Git and GitHub in collaborative, Agile-driven
-              teams. Currently, I’m expanding my skill set by learning Next.js
-              and Node.js, aiming to transition into a full-stack development
-              role.
-            </p>
-          </div>
-     <ActionToggleButtons className="border-[#FD853A]"/>
+    <section className="editorial-about section-wrap">
+      <div className="about-copy">
+        <p className="eyebrow">{t("about")}</p>
+        <h1 className="editorial-heading">{t("aboutHeadline")}</h1>
+        <p className="about-description">{t("aboutBody")}</p>
+        <div className="about-tags" aria-label="Focus areas">
+          <span>React · TypeScript</span><span>Responsive UI</span><span>Product design</span>
         </div>
-        <div className="w-[200px] lg:w-[300px] h-[200px] lg:h-[300px] rounded-full bg-[#FD853A] flex justify-center items-center">
-          <img
-            className="w-full h-full object-cover rounded-full"
-            src={personalPhoto}
-            alt="personal photo"
-          />
-        </div>
+        <ActionToggleButtons className="about-actions" />
       </div>
-
+      <div className="about-visual">
+        <div className="about-visual-glow" />
+        <figure className="about-photo-frame" data-tilt-card>
+          <img src={personalPhoto} alt="İlaha Mammadova working at her desk" />
+        </figure>
+        <div className="about-caption"><span className="caption-dot" />{t("role")}</div>
+        <span className="about-index" aria-hidden="true">01 / 04</span>
+      </div>
+    </section>
   );
 };
 

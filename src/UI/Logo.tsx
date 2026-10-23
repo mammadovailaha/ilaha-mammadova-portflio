@@ -6,15 +6,13 @@ interface Props{
 const Logo:FC<Props> = ({className}) => {
   return (
  <Link to={"/"}>
-    <div className={ `flex px-3.5 py-0.5 items-center gap-2 bg-[#d6d1d163] backdrop-blur-2xl rounded-4xl ${className}`}>
-      <div className="w-11 h-11 bg-[#FD853A]  rounded-full flex justify-center items-center font-[lufga] text-white leading-4 lg:leading-5 text-base lg:text-lg">
+    <div className={ `flex px-3.5 py-0.5 items-center gap-2 rounded-4xl ${className}`}>
+      <div className="grid h-11 w-11 place-items-center rounded-full bg-[var(--gradient-main)] font-[lufga] text-base leading-4 text-white lg:text-lg lg:leading-5">
         IM
       </div>
       <div className="flex flex-col justify-center items-start">
-        <h2 className="text-black md:text-white font-[lufga] text-lg">Ilaha</h2>
-        <p className="text-black md:text-white font-[lufga] text-lg ">
-          Mammadova
-        </p>
+        <h2 className="font-[lufga] text-base font-semibold tracking-tight text-[var(--text)]">İlaha Mammadova</h2>
+        <p className="font-[lufga] text-[11px] tracking-wide text-[var(--muted)]">Frontend developer</p>
       </div>
     </div>
  </Link>
