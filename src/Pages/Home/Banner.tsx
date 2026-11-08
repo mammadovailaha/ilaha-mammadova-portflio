@@ -1,9 +1,24 @@
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import portrait from "../../assets/images/ilaha-avatar.png";
 import { useT } from "../../context/Preferences";
 
+const ThreeAccentBoundary = lazy(() => import("../../components/ThreeAccentBoundary"));
+
 const Banner = () => {
   const t = useT();
+  const [showThree, setShowThree] = useState(false);
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const run = () => setShowThree(true);
+    const idleWindow = window as Window & { requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number; cancelIdleCallback?: (id: number) => void };
+    if (idleWindow.requestIdleCallback) {
+      const id = idleWindow.requestIdleCallback(run, { timeout: 1600 });
+      return () => idleWindow.cancelIdleCallback?.(id);
+    }
+    const id = window.setTimeout(run, 600);
+    return () => window.clearTimeout(id);
+  }, []);
   return (
     <section className="portfolio-hero relative mx-auto mt-2 grid min-h-[680px] w-[92%] max-w-[1320px] overflow-hidden border-x border-[var(--line)] bg-[var(--surface)] lg:grid-cols-[1.08fr_.92fr]">
       <div className="relative z-10 flex flex-col items-start justify-center px-7 py-14 sm:px-12 lg:px-16 xl:px-20">
@@ -34,6 +49,7 @@ const Banner = () => {
         <div className="absolute bottom-[12%] left-[5%] h-28 w-28 rounded-full bg-[#fff7eb]/60 blur-2xl" />
         <span className="absolute left-[9%] top-[25%] text-[10px] uppercase tracking-[0.24em] text-[#7a604a] [writing-mode:vertical-rl]">{t("buildPurpose")}</span>
         <img className="hero-portrait relative z-10 h-[96%] w-[91%] max-w-[610px] object-contain object-bottom drop-shadow-[0_22px_35px_rgba(84,50,31,0.16)]" src={portrait} alt="Illustrated portrait of İlaha Mammadova" />
+        {showThree && <Suspense fallback={null}><ThreeAccentBoundary /></Suspense>}
         <div className="absolute bottom-7 right-5 z-20 rounded-2xl border border-white/70 bg-[var(--surface)]/85 px-4 py-3 shadow-sm backdrop-blur-md sm:bottom-10 sm:right-10">
           <p className="text-xs uppercase tracking-[0.16em] text-[var(--muted)]">{t("creating")}</p>
           <p className="mt-1 text-sm font-medium text-[var(--text)]">{t("forWeb")} ↗</p>

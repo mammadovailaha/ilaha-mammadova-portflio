@@ -61,6 +61,8 @@ a { color: inherit; }
 .portfolio-hero h1 { font-size: clamp(3.25rem, 7.4vw, 6.3rem); }
 .portfolio-hero h1 span { background: var(--gradient-rich); background-clip: text; -webkit-text-fill-color: transparent; }
 .hero-art { background: transparent; }
+.three-accent { position: absolute; z-index: 12; inset: 2% 0 7%; width: 100%; height: 91%; pointer-events: none; opacity: .95; }
+.three-accent canvas { display: block; width: 100% !important; height: 100% !important; }
 .hero-portrait { z-index: 2; }
 .hero-art > div:first-child { display: none; }
 .hero-art-inner { display: none; }
