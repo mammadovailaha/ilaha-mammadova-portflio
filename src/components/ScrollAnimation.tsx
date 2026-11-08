@@ -10,9 +10,8 @@ const ScrollAnimation:FC<Props> = ({children}) => {
   return (
  <div
   ref={ref}
-  className={`transition-all duration-1000 ease-out transform 
-    ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-95"}
-  `}
+    data-scroll-reveal={isVisible ? "visible" : "hidden"}
+    className={`scroll-reveal transition-all duration-1000 ease-out transform ${isVisible ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-10 scale-[.98]"}`}
 >
   {children}
 </div>
