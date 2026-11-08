@@ -12,7 +12,7 @@ const Logo:FC<Props> = ({className}) => {
       </div>
       <div className="flex flex-col justify-center items-start">
         <h2 className="font-[lufga] text-base font-semibold tracking-tight text-[var(--text)]">İlaha Mammadova</h2>
-        <p className="font-[lufga] text-[11px] tracking-wide text-[var(--muted)]">Frontend developer</p>
+        <p className="font-[lufga] text-[11px] tracking-wide text-[var(--muted)]">Software Engineer</p>
       </div>
     </div>
  </Link>

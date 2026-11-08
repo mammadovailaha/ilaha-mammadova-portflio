@@ -7,7 +7,6 @@ import type { TranslationKey } from "../context/Preferences";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 const navItems = [
-  { key: "home" as TranslationKey, path: "/" },
   { key: "about" as TranslationKey, path: "/about" },
   { key: "skillsNav" as TranslationKey, path: "/#skills" },
   { key: "experienceNav" as TranslationKey, path: "/#experience" },

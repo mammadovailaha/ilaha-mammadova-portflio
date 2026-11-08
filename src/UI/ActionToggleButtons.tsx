@@ -28,7 +28,7 @@ const ActionToggleButtons:FC<Props> = ({className}) => {
  <div className={`action-buttons flex flex-wrap items-center gap-3 ${className}`}>
       <a
         href="/cv/Ilaha_Mammadova.pdf"
-        download="Ilaha_Mammadova_CV.pdf"
+        download="Ilaha_Mammadova_cv.pdf"
         aria-label="Download Ilaha Mammadova CV"
         onClick={() => setActiveButton("resume")}
         className={`action-button ${activeButton === "resume" ? "action-button-active" : ""}`}
