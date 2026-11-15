@@ -2,19 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <script>
-      (function () {
-        try {
-          var saved = localStorage.getItem("ilaha-portfolio-theme");
-          var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-          document.documentElement.dataset.theme = theme;
-          document.documentElement.style.colorScheme = theme;
-        } catch (_) {}
-      })();
-    </script>
-    <!-- <link rel="icon" type="image/svg+xml" href="" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ilaha Mammadova</title>
+    <meta name="theme-color" content="#0b0b0f" />
+    <meta name="description" content="A creative developer building thoughtful digital experiences." />
+    <title>Your Name — Creative Developer</title>
   </head>
   <body>
     <div id="root"></div>

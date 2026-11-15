@@ -1,44 +1,15 @@
 import type { FC } from "react";
 import ScrollAnimation from "./ScrollAnimation";
 import { useT } from "../context/Preferences";
-import type { TranslationKey } from "../context/Preferences";
-
-interface DataItem {
-  institution?: string;
-  year?: string;
-  degree?: string;
-  description?: string;
-  institutionKey?: TranslationKey;
-  degreeKey?: TranslationKey;
-  descriptionKey?: TranslationKey;
-  date?: string;
-}
-
-const educationItems: DataItem[] = [
-  {
-    institution: "Azerbaijan State Pedagogical University",
-    degreeKey: "degree",
-    year: "2020 – 2024",
-    descriptionKey: "educationDescription",
-  },
-  { institution: "Turing Academy · Baku, Azerbaijan", degreeKey: "turingCourse", descriptionKey: "turingDescription" },
-  { institution: "Network Training Center · Baku, Azerbaijan", degreeKey: "networkCourse", descriptionKey: "networkDescription" },
-];
-
-const experienceItems: DataItem[] = [
-  { institution: "Agile Pulse (Startup) · Baku, Azerbaijan", degreeKey: "frontendRole", date: "May 2025 – January 2026", descriptionKey: "agileDescription" },
-  { institution: "Intern Intelligence · Baku, Azerbaijan", degreeKey: "internRole", date: "July 2025 – August 2025", descriptionKey: "internDescription" },
-  { institution: "Flup Agency · Baku, Azerbaijan", degreeKey: "internRole", date: "August 2025 – November 2025", descriptionKey: "flupDescription" },
-  { institution: "Is Hesabi MMC · Baku, Azerbaijan", degreeKey: "frontendRole", date: "December 2025 – Present", descriptionKey: "isHesabiDescription" },
-];
+import { education, experience, type ExperienceItem } from "../data/experience";
 
 interface Props {
   title: string;
-  data?: DataItem[];
+  data?: ExperienceItem[];
   listClassName:string;
 }
 
-const SectionList: FC<Props> = ({ title, data = title === "Education" ? educationItems : experienceItems, listClassName }) => {
+const SectionList: FC<Props> = ({ title, data = title === "Education" ? education : experience, listClassName }) => {
   const t = useT();
   return (
    <ScrollAnimation>

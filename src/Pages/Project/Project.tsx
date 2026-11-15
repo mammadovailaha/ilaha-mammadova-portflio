@@ -1,23 +1,10 @@
 import type { FC } from "react";
 import { useNavigate } from "react-router-dom";
-import photo from "../../assets/icons/projectPhoto1.png";
-import agilePulse from "../../assets/images/agilePluse.png";
-import portfolio from "../../assets/images/designerProtfolio.png";
-import avtohesab from "../../assets/images/avtohesab.png";
-import binahesabi from "../../assets/images/binahesabi.png";
 import Navbar from "../../Layout/Navbar";
 import ProjectCard from "./ProjectCard";
 import { useT } from "../../context/Preferences";
-import type { TranslationKey } from "../../context/Preferences";
 import ScrollAnimation from "../../components/ScrollAnimation";
-
-const projects = [
-  { id: 1, titleKey: "avtohesab" as TranslationKey, image: avtohesab, typeKey: "businessPlatform" as TranslationKey, descriptionKey: "avtohesabDescription" as TranslationKey, externalUrl: "https://avtohesab.com/" },
-  { id: 2, titleKey: "binahesabi" as TranslationKey, image: binahesabi, typeKey: "propertyPlatform" as TranslationKey, descriptionKey: "binahesabiDescription" as TranslationKey, externalUrl: "https://binahesabi.com/" },
-  { id: 3, titleKey: "agile" as TranslationKey, image: agilePulse, typeKey: "saas" as TranslationKey, descriptionKey: "projectTwoDescription" as TranslationKey },
-  { id: 4, titleKey: "educationProject" as TranslationKey, image: photo, typeKey: "fullstack" as TranslationKey, descriptionKey: "projectOneDescription" as TranslationKey },
-  { id: 5, titleKey: "portfolio" as TranslationKey, image: portfolio, typeKey: "creative" as TranslationKey, descriptionKey: "projectThreeDescription" as TranslationKey },
-];
+import { projects } from "../../data/projects";
 
 const Project: FC = () => {
   const navigate = useNavigate();

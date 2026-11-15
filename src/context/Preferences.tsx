@@ -20,6 +20,7 @@ export const usePreferences = () => {
 
 export const translations = {
   en: {
+    profileName: "Ilaha Mammadova",
     home: "Home", about: "About", skillsNav: "Skills", experienceNav: "Experience", projects: "Projects", contact: "Contact", letsTalk: "Let’s talk",
     role: "SOFTWARE ENGINEER · BAKU, AZERBAIJAN", heroTitle: "Building digital", heroAccent: "experiences, differently.",
     heroBody: "I’m İlaha Mammadova, a Software Engineer focused on React, TypeScript, and modern JavaScript. I build reusable component systems, integrate REST APIs, manage client-side state, and optimize responsive interfaces for business applications.",
@@ -46,8 +47,12 @@ export const translations = {
     certificatesEyebrow: "Continuous learning", certificatesTitle: "Training & certifications", certificateMeta: "Meta React Specialization Certificate", certificateNode: "Developing Back-End Apps with Node.js and Express", certificateTypescript: "Ultimate TypeScript Course 2024", certificateVersion: "Version Control", certificateUx: "Foundations of UX Design", certificateBuild: "Build Websites with HTML, JavaScript, AngularJS & React", certificateNext: "Learn Next.js", certificateProvider: "Meta · Coursera", certificateDate: "June 2025",
     skillsIntro: "A practical toolkit for clear, reliable interfaces across modern web products.", projectsHome: "Selected work", projectsHomeIntro: "Projects, experiments, and interfaces I’ve helped bring to life.", exploreAll: "Explore all projects", experienceIntro: "Frontend delivery and design contributions across business platforms and product teams.",
     bannerTitle: "No noise. Just thoughtful code.", bannerBody: "Clean, responsive interfaces built around real people and useful details.",
+    scroll: "Scroll", scrollExplore: "Scroll to explore", independentPractice: "Independent digital practice", loading: "Loading…",
+    language: "Language", switchToDark: "Switch to dark theme", switchToLight: "Switch to light theme",
+    musicPlayer: "Now playing", playMusic: "Play music", pauseMusic: "Pause music", previousTrack: "Previous track", nextTrack: "Next track", volume: "Volume",
   },
   ru: {
+    profileName: "Илаха Мамедова",
     home: "Главная", about: "Обо мне", skillsNav: "Навыки", experienceNav: "Опыт", projects: "Проекты", contact: "Контакты", letsTalk: "Написать мне",
     role: "SOFTWARE ENGINEER · БАКУ, АЗЕРБАЙДЖАН", heroTitle: "Создаю цифровые", heroAccent: "впечатления с характером.",
     heroBody: "Я Илаха Мамедова, Software Engineer, специализируюсь на React, TypeScript и современном JavaScript. Создаю переиспользуемые компонентные системы, интегрирую REST API, управляю состоянием на клиенте и оптимизирую адаптивные интерфейсы бизнес-приложений.",
@@ -74,8 +79,12 @@ export const translations = {
     certificatesEyebrow: "Постоянное обучение", certificatesTitle: "Курсы и сертификаты", certificateMeta: "Сертификат Meta React Specialization", certificateNode: "Разработка backend-приложений на Node.js и Express", certificateTypescript: "Полный курс TypeScript 2024", certificateVersion: "Контроль версий", certificateUx: "Основы UX-дизайна", certificateBuild: "Создание сайтов на HTML, JavaScript, AngularJS и React", certificateNext: "Изучение Next.js", certificateProvider: "Meta · Coursera", certificateDate: "Июнь 2025",
     skillsIntro: "Практичный набор технологий для понятных и надёжных современных веб-продуктов.", projectsHome: "Избранные проекты", projectsHomeIntro: "Проекты и интерфейсы, в воплощении которых я участвовала.", exploreAll: "Все проекты", experienceIntro: "Frontend-разработка и дизайн в бизнес-платформах и продуктовых командах.",
     bannerTitle: "Без лишнего. Только продуманный код.", bannerBody: "Чистые адаптивные интерфейсы, созданные с вниманием к людям и деталям.",
+    scroll: "Прокрутить", scrollExplore: "Листайте дальше", independentPractice: "Независимая цифровая практика", loading: "Загрузка…",
+    language: "Язык", switchToDark: "Включить тёмную тему", switchToLight: "Включить светлую тему",
+    musicPlayer: "Сейчас играет", playMusic: "Воспроизвести", pauseMusic: "Пауза", previousTrack: "Предыдущий трек", nextTrack: "Следующий трек", volume: "Громкость",
   },
   az: {
+    profileName: "İlaha Məmmədova",
     home: "Ana səhifə", about: "Haqqımda", skillsNav: "Bacarıqlar", experienceNav: "Təcrübə", projects: "Layihələr", contact: "Əlaqə", letsTalk: "Əlaqə saxla",
     role: "SOFTWARE ENGINEER · BAKI, AZƏRBAYCAN", heroTitle: "Rəqəmsal", heroAccent: "təcrübələri fərqli qururam.",
     heroBody: "Mən İlaha Məmmədova, React, TypeScript və müasir JavaScript üzrə çalışan Software Engineerəm. Təkrar istifadə olunan komponent sistemləri qurur, REST API-ləri inteqrasiya edir, client-side state idarəetməsi ilə işləyir və biznes tətbiqləri üçün responsiv interfeysləri optimallaşdırıram.",
@@ -102,6 +111,9 @@ export const translations = {
     certificatesEyebrow: "Davamlı öyrənmə", certificatesTitle: "Təlimlər və sertifikatlar", certificateMeta: "Meta React Specialization sertifikatı", certificateNode: "Node.js və Express ilə backend tətbiqlərinin hazırlanması", certificateTypescript: "Ultimate TypeScript Course 2024", certificateVersion: "Versiyaların idarə olunması", certificateUx: "UX dizaynının əsasları", certificateBuild: "HTML, JavaScript, AngularJS və React ilə vebsaytların hazırlanması", certificateNext: "Learn Next.js", certificateProvider: "Meta · Coursera", certificateDate: "İyun 2025",
     skillsIntro: "Müasir veb məhsullar üçün aydın və etibarlı interfeyslər yaratmağa yönəlmiş praktik texnologiya dəsti.", projectsHome: "Seçilmiş işlər", projectsHomeIntro: "Həyata keçirilməsinə töhfə verdiyim layihə və interfeyslər.", exploreAll: "Bütün layihələrə bax", experienceIntro: "Biznes platformaları və məhsul komandalarında frontend və dizayn töhfələri.",
     bannerTitle: "Artıq səs-küy yox. Düşünülmüş kod.", bannerBody: "İnsanlara və faydalı detallara əsaslanan təmiz, responsiv interfeyslər.",
+    scroll: "Sürüşdür", scrollExplore: "Kəşf etmək üçün sürüşdür", independentPractice: "Müstəqil rəqəmsal fəaliyyət", loading: "Yüklənir…",
+    language: "Dil", switchToDark: "Qaranlıq mövzuya keç", switchToLight: "Açıq mövzuya keç",
+    musicPlayer: "İndi səslənir", playMusic: "Musiqini başlat", pauseMusic: "Musiqini dayandır", previousTrack: "Əvvəlki mahnı", nextTrack: "Növbəti mahnı", volume: "Səs səviyyəsi",
   },
 } as const;
 

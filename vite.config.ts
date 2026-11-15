@@ -6,6 +6,18 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   optimizeDeps: {
-    include: ["three", "@react-three/fiber", "@react-three/drei"],
+    // Leave Drei's barrel unbundled: it pulls optional CommonJS modules into
+    // one optimized file, which has caused broken exports in this workspace.
+    exclude: ["@react-three/drei"],
+    include: [
+      "three",
+      "@react-three/fiber",
+      "cookie",
+      "stats.js",
+      "tunnel-rat",
+      "zustand",
+      "use-sync-external-store",
+      "use-sync-external-store/shim/with-selector",
+    ],
   },
 })
