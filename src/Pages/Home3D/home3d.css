@@ -25,6 +25,7 @@
 
 /* Give the hero controls and supporting copy a little more presence. */
 .home3d-wordmark{font-size:14px}.home3d-header nav a{font-size:13px}.home3d-bottom p{max-width:340px;font-size:15px}.home3d-scroll{font-size:12px}.home3d-kicker{font-size:10px}.home3d-languages button{font-size:11px}
+.home3d-theme-toggle{width:36px;height:36px;padding:0;place-items:center;line-height:1}.home3d-theme-toggle svg{display:block;width:19px;height:19px}
 @media(max-width:700px){.home3d-wordmark{font-size:13px}.home3d-header nav a{font-size:12px}.home3d-bottom p{max-width:220px;font-size:13px}.home3d-scroll{font-size:11px}.home3d-kicker{font-size:9px}}
 
 /* Timeline cards need a stronger glass layer so the 3D scene stays behind the text. */
