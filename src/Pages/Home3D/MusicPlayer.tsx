@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { FiPause, FiPlay, FiSkipBack, FiSkipForward, FiVolume1, FiVolume2 } from "react-icons/fi";
 import { useT } from "../../context/Preferences";
 import { musicPlaylist } from "../../data/music";
 
@@ -54,12 +55,12 @@ export function MusicPlayer() {
     <audio ref={audioRef} src={track.src} preload="metadata" onEnded={() => selectTrack(1)} onPlay={() => setIsPlaying(true)} onPause={() => setIsPlaying(false)} />
     <img className="home3d-player-cover" src={track.cover} alt={`${track.artist} — ${track.title}`} />
     <div className="home3d-player-info"><span className="home3d-player-label">{t("musicPlayer")}</span><strong>{track.title}</strong><small>{track.artist}</small>
-      <label className="home3d-volume"><span aria-hidden="true">−</span><input aria-label={t("volume")} type="range" min="0" max="1" step="0.01" value={volume} onChange={(event) => { const nextVolume = Number(event.target.value); setVolume(nextVolume); if (audioRef.current) audioRef.current.volume = nextVolume; }} /><span aria-hidden="true">+</span></label>
+      <label className="home3d-volume"><FiVolume1 aria-hidden="true" /><input aria-label={t("volume")} type="range" min="0" max="1" step="0.01" value={volume} onChange={(event) => { const nextVolume = Number(event.target.value); setVolume(nextVolume); if (audioRef.current) audioRef.current.volume = nextVolume; }} /><FiVolume2 aria-hidden="true" /></label>
     </div>
     <div className="home3d-player-controls">
-      <button type="button" aria-label={t("previousTrack")} title={t("previousTrack")} onClick={() => selectTrack(-1)}>⏮</button>
-      <button className="home3d-play-toggle" type="button" aria-label={isPlaying ? t("pauseMusic") : t("playMusic")} title={isPlaying ? t("pauseMusic") : t("playMusic")} onClick={togglePlayback}>{isPlaying ? "Ⅱ" : "▶"}</button>
-      <button type="button" aria-label={t("nextTrack")} title={t("nextTrack")} onClick={() => selectTrack(1)}>⏭</button>
+      <button type="button" aria-label={t("previousTrack")} title={t("previousTrack")} onClick={() => selectTrack(-1)}><FiSkipBack aria-hidden="true" /></button>
+      <button className="home3d-play-toggle" type="button" aria-label={isPlaying ? t("pauseMusic") : t("playMusic")} title={isPlaying ? t("pauseMusic") : t("playMusic")} onClick={togglePlayback}>{isPlaying ? <FiPause aria-hidden="true" /> : <FiPlay aria-hidden="true" />}</button>
+      <button type="button" aria-label={t("nextTrack")} title={t("nextTrack")} onClick={() => selectTrack(1)}><FiSkipForward aria-hidden="true" /></button>
     </div>
   </aside>;
 }
