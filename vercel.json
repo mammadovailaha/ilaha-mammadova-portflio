@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/cv/business-analyst", "destination": "/index.html" },
     { "source": "/cv/frontend", "destination": "/index.html" },
-    { "source": "/cv/software", "destination": "/index.html" }
+    { "source": "/cv/software", "destination": "/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
