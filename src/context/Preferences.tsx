@@ -50,6 +50,7 @@ export const translations = {
     scroll: "Scroll", scrollExplore: "Scroll to explore", independentPractice: "Independent digital practice", loading: "Loading…",
     language: "Language", switchToDark: "Switch to dark theme", switchToLight: "Switch to light theme",
     musicPlayer: "Now playing", playMusic: "Play music", pauseMusic: "Pause music", previousTrack: "Previous track", nextTrack: "Next track", volume: "Volume",
+    cvEyebrow: "Curriculum vitae", cvBusinessAnalyst: "Business Analyst", cvFrontend: "Frontend Developer", cvSoftware: "Software Developer", cvOpenPdf: "Open PDF", cvDownloadPdf: "Download PDF", cvBackToPortfolio: "Back to portfolio",
   },
   ru: {
     profileName: "Илаха Мамедова",
@@ -82,6 +83,7 @@ export const translations = {
     scroll: "Прокрутить", scrollExplore: "Листайте дальше", independentPractice: "Независимая цифровая практика", loading: "Загрузка…",
     language: "Язык", switchToDark: "Включить тёмную тему", switchToLight: "Включить светлую тему",
     musicPlayer: "Сейчас играет", playMusic: "Воспроизвести", pauseMusic: "Пауза", previousTrack: "Предыдущий трек", nextTrack: "Следующий трек", volume: "Громкость",
+    cvEyebrow: "Резюме", cvBusinessAnalyst: "Бизнес-аналитик", cvFrontend: "Frontend-разработчик", cvSoftware: "Разработчик ПО", cvOpenPdf: "Открыть PDF", cvDownloadPdf: "Скачать PDF", cvBackToPortfolio: "На сайт-портфолио",
   },
   az: {
     profileName: "İlaha Məmmədova",
@@ -114,6 +116,7 @@ export const translations = {
     scroll: "Sürüşdür", scrollExplore: "Kəşf etmək üçün sürüşdür", independentPractice: "Müstəqil rəqəmsal fəaliyyət", loading: "Yüklənir…",
     language: "Dil", switchToDark: "Qaranlıq mövzuya keç", switchToLight: "Açıq mövzuya keç",
     musicPlayer: "İndi səslənir", playMusic: "Musiqini başlat", pauseMusic: "Musiqini dayandır", previousTrack: "Əvvəlki mahnı", nextTrack: "Növbəti mahnı", volume: "Səs səviyyəsi",
+    cvEyebrow: "CV", cvBusinessAnalyst: "Biznes analitiki", cvFrontend: "Frontend Developer", cvSoftware: "Software Developer", cvOpenPdf: "PDF-i aç", cvDownloadPdf: "PDF-i yüklə", cvBackToPortfolio: "Portfolioya qayıt",
   },
 } as const;
 
