@@ -51,6 +51,7 @@ export const translations = {
     language: "Language", switchToDark: "Switch to dark theme", switchToLight: "Switch to light theme",
     musicPlayer: "Now playing", playMusic: "Play music", pauseMusic: "Pause music", previousTrack: "Previous track", nextTrack: "Next track", volume: "Volume",
     cvEyebrow: "Curriculum vitae", cvBusinessAnalyst: "Business Analyst", cvFrontend: "Frontend Developer", cvSoftware: "Software Developer", cvOpenPdf: "Open PDF", cvDownloadPdf: "Download PDF", cvBackToPortfolio: "Back to portfolio",
+    cardEyebrow: "DIGITAL PROFILE", cardViewCv: "View CV", cardContact: "Contact", cardConnect: "Let’s connect", cardBack: "Back to portfolio", cardAvailability: "Open to opportunities",
   },
   ru: {
     profileName: "Илаха Мамедова",
@@ -84,6 +85,7 @@ export const translations = {
     language: "Язык", switchToDark: "Включить тёмную тему", switchToLight: "Включить светлую тему",
     musicPlayer: "Сейчас играет", playMusic: "Воспроизвести", pauseMusic: "Пауза", previousTrack: "Предыдущий трек", nextTrack: "Следующий трек", volume: "Громкость",
     cvEyebrow: "Резюме", cvBusinessAnalyst: "Бизнес-аналитик", cvFrontend: "Frontend-разработчик", cvSoftware: "Разработчик ПО", cvOpenPdf: "Открыть PDF", cvDownloadPdf: "Скачать PDF", cvBackToPortfolio: "На сайт-портфолио",
+    cardEyebrow: "ЦИФРОВОЙ ПРОФИЛЬ", cardViewCv: "Посмотреть CV", cardContact: "Контакты", cardConnect: "Связаться со мной", cardBack: "На сайт-портфолио", cardAvailability: "Открыта к предложениям",
   },
   az: {
     profileName: "İlaha Məmmədova",
@@ -117,6 +119,7 @@ export const translations = {
     language: "Dil", switchToDark: "Qaranlıq mövzuya keç", switchToLight: "Açıq mövzuya keç",
     musicPlayer: "İndi səslənir", playMusic: "Musiqini başlat", pauseMusic: "Musiqini dayandır", previousTrack: "Əvvəlki mahnı", nextTrack: "Növbəti mahnı", volume: "Səs səviyyəsi",
     cvEyebrow: "CV", cvBusinessAnalyst: "Biznes analitiki", cvFrontend: "Frontend Developer", cvSoftware: "Software Developer", cvOpenPdf: "PDF-i aç", cvDownloadPdf: "PDF-i yüklə", cvBackToPortfolio: "Portfolioya qayıt",
+    cardEyebrow: "RƏQƏMSAL PROFİL", cardViewCv: "CV-yə bax", cardContact: "Əlaqə", cardConnect: "Əlaqə saxla", cardBack: "Portfolioya qayıt", cardAvailability: "Yeni imkanlara açığam",
   },
 } as const;
 
