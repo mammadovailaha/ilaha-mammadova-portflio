@@ -4,7 +4,7 @@ import { FiArrowLeft, FiArrowUpRight, FiAtSign, FiGithub, FiLinkedin, FiMapPin, 
 import { useT } from "../../context/Preferences";
 import type { TranslationKey } from "../../context/Preferences";
 import { contactDetails, socialLinks } from "../../data/socialLinks";
-import portrait from "../../assets/icons/ilaha-avatar.png";
+import portrait from "../../assets/icons/images/ilaha-avatar.png";
 import "./digital-card.css";
 
 type CardKind = "businessAnalyst" | "frontend" | "software";
