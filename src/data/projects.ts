@@ -4,6 +4,7 @@ import agilePulse from "../assets/images/agilePluse.png";
 import portfolio from "../assets/images/designerProtfolio.png";
 import avtohesab from "../assets/images/avtohesab.png";
 import binahesabi from "../assets/images/binahesabi.png";
+import avtobest from "../assets/images/avtobest.png";
 
 export type Project = {
   id: number;
@@ -15,6 +16,7 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  { id: 6, titleKey: "avtobest", image: avtobest, typeKey: "automotiveEcommerce", descriptionKey: "avtobestDescription" },
   { id: 1, titleKey: "avtohesab", image: avtohesab, typeKey: "businessPlatform", descriptionKey: "avtohesabDescription", externalUrl: "https://avtohesab.com/" },
   { id: 2, titleKey: "binahesabi", image: binahesabi, typeKey: "propertyPlatform", descriptionKey: "binahesabiDescription", externalUrl: "https://binahesabi.com/" },
   { id: 3, titleKey: "agile", image: agilePulse, typeKey: "saas", descriptionKey: "projectTwoDescription" },

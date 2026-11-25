@@ -2,6 +2,7 @@ import type { FC } from "react";
 import photo from "../../assets/icons/projectPhoto1.png";
 import agilePulse from "../../assets/images/agilePluse.png";
 import portfolio from "../../assets/images/designerProtfolio.png";
+import avtobest from "../../assets/images/avtobest.png";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../../Layout/Navbar";
 import { IoLogoGithub } from "react-icons/io";
@@ -9,6 +10,12 @@ import { CgWebsite } from "react-icons/cg";
 import { useT } from "../../context/Preferences";
 import type { TranslationKey } from "../../context/Preferences";
 const projectData = [
+  {
+    id: 6,
+    titleKey: "avtobest" as TranslationKey,
+    descriptionKey: "avtobestDescription" as TranslationKey,
+    image: avtobest,
+  },
   {
     id: 1,
     titleKey: "educationProject" as TranslationKey,

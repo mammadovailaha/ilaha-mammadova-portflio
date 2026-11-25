@@ -4,9 +4,11 @@ import agile from "../../assets/images/agilePluse.png";
 import designer from "../../assets/images/designerProtfolio.png";
 import avtohesab from "../../assets/images/avtohesab.png";
 import binahesabi from "../../assets/images/binahesabi.png";
+import avtobest from "../../assets/images/avtobest.png";
 import { useT } from "../../context/Preferences";
 
 const work = [
+  { id: 4, title: "avtobest" as const, type: "automotiveEcommerce" as const, image: avtobest, href: "/project/project-detail/6" },
   { id: "avtohesab", title: "avtohesab" as const, type: "businessPlatform" as const, image: avtohesab, href: "https://avtohesab.com/" },
   { id: "binahesabi", title: "binahesabi" as const, type: "propertyPlatform" as const, image: binahesabi, href: "https://binahesabi.com/" },
   { id: 1, title: "educationProject" as const, type: "fullstack" as const, image: educational, href: "/project/project-detail/1" },
